@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bling.com.br/Api/v2/notasfiscais/page=1/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Apr 2016 16:01:07 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '242'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"retorno":{"notasfiscais":[{"notafiscal":{"serie":"1","numero":"000001","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
+        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-04 00:00:00","valorNota":"64.90","chaveAcesso":null,"codigosRastreamento":[]}},{"notafiscal":{"serie":"1","numero":"000002","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
+        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-06 00:00:00","valorNota":"49.00","chaveAcesso":null,"codigosRastreamento":[]}}]}}'
+    http_version: 
+  recorded_at: Wed, 06 Apr 2016 16:01:07 GMT
+recorded_with: VCR 3.0.1
