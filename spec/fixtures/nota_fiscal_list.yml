@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Apr 2016 14:57:15 GMT
+      - Fri, 08 Apr 2016 15:35:11 GMT
       Server:
       - Apache
       Vary:
@@ -39,5 +39,5 @@ http_interactions:
         AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-07 00:00:00","valorNota":"49.90","chaveAcesso":null,"codigosRastreamento":{"codigoRastreamento":"DW111802513BR"},"transporte":{"servico_correios":"SEDEX
         (CONTRATO)","volumes":[{"idServico":"512679064","servico":"SEDEX (CONTRATO)","codigoRastreamento":"DW111802513BR","valorFretePrevisto":"13.65","dataSaida":"2016-04-07","prazoEntregaPrevisto":"1"}]}}}]}}'
     http_version: 
-  recorded_at: Fri, 08 Apr 2016 14:57:15 GMT
+  recorded_at: Fri, 08 Apr 2016 15:35:11 GMT
 recorded_with: VCR 3.0.1

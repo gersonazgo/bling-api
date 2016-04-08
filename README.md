@@ -18,18 +18,30 @@ Então execute:
 
 ## Instruções de uso
 
-TODO: Write usage instructions here
+### Nota Fiscal
 
-## Development
+Você pode buscar uma nota específica através do comando `Bling::Api::NotaFiscal.find` ou listar todas com `Bling::Api::NotaFiscal.all`. A inserção de Nota Fiscal se dá através do pedido e, portanto, não possuímos um método .save.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+# Busca uma nota fiscal através de seu número e série
+nota_fiscal = Bling::Api::NotaFiscal.find(numero: 1, serie: 1)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+# Busca todas as notas fiscais
+notas_fiscais = Bling::Api::NotaFiscal.all
 
-## Contributing
+# Busca notas fiscais com filtros e paginação 
+# Situações possíveis 
+# 1 - Pendente
+# 2 - Emitida
+# 3 - Cancelada
+# 4 - Enviada - Aguardando recibo
+# 5 - Rejeitada
+# 6 - Autorizada
+# 7 - Emitida DANFE
+# 8 - Registrada
+# 9 - Enviada - Aguardando protocolo
+# 10 - Denegada
+notas_fiscais = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2016,4,4), data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
 
-1. Fork it ( https://github.com/[my-github-username]/bling-api/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+# Inserir uma nova nota fiscal se dá apenas através do pedido.
+```

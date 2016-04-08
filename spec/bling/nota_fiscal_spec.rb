@@ -4,9 +4,7 @@ describe Bling::Api::NotaFiscal do
   describe "find" do 
     it "returns a valid NotaFiscal when it exists" do
       VCR.use_cassette('valid_nota_fiscal') do
-        numero = 4
-        serie = 1
-        nota_fiscal = Bling::Api::NotaFiscal.find(numero, serie)
+        nota_fiscal = Bling::Api::NotaFiscal.find(numero: 4, serie: 1)
         expect(Bling::Api::NotaFiscal).to eq(nota_fiscal.class)
 
         # Check that the fields are accessible by our model
@@ -45,9 +43,7 @@ describe Bling::Api::NotaFiscal do
 
     it "returns an error when it doesn't exist" do
       VCR.use_cassette('invalid_nota_fiscal') do
-        numero = 1123
-        serie = 2442
-        expect { Bling::Api::NotaFiscal.find(numero, serie) }.to raise_error Bling::Api::BlingResourceNotFound
+        expect { Bling::Api::NotaFiscal.find(numero: 1, serie: 5) }.to raise_error Bling::Api::BlingResourceNotFound
       end
     end
   end

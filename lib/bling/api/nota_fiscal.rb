@@ -38,11 +38,11 @@ module Bling
         end
       end
 
-      def self.find(numero, serie)
-        if serie.nil?
+      def self.find attributes
+        if attributes[:serie].nil?
           super
         else
-          super "#{numero}/#{serie}"
+          super "#{attributes[:numero]}/#{attributes[:serie]}"
         end
       end
 

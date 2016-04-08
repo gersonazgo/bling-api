@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Apr 2016 14:57:16 GMT
+      - Fri, 08 Apr 2016 15:35:12 GMT
       Server:
       - Apache
       Vary:
@@ -35,5 +35,5 @@ http_interactions:
       string: '{"retorno":{"notasfiscais":[{"notafiscal":{"serie":"1","numero":"000001","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
         AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-04 00:00:00","valorNota":"64.90","chaveAcesso":null,"codigosRastreamento":[]}}]}}'
     http_version: 
-  recorded_at: Fri, 08 Apr 2016 14:57:15 GMT
+  recorded_at: Fri, 08 Apr 2016 15:35:11 GMT
 recorded_with: VCR 3.0.1
