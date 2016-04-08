@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe Bling::Api::NotaFiscal do
+  before :each do 
+    Bling::Api.apikey = ENV['BLING_API_KEY']
+  end
+
   describe "find" do 
     it "returns a valid NotaFiscal when it exists" do
       VCR.use_cassette('valid_nota_fiscal') do

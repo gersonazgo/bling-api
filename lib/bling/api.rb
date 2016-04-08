@@ -14,6 +14,8 @@ API_URL = "https://bling.com.br/Api/v2/"
 module Bling
   module Api
     
+    class << self; attr_accessor :apikey; end
+
     def self.api_url path
       File.join path, "/json/"
     end
@@ -22,7 +24,7 @@ module Bling
       conn = Faraday.new(API_URL)
 
       conn.get do |req|                           
-        req.url "#{api_url(path)}", apikey: ENV['BLING_API_KEY']
+        req.url "#{api_url(path)}", apikey: Bling::Api.apikey
         req.params['filters'] = filters
       end
     end
@@ -33,7 +35,7 @@ module Bling
       conn = Faraday.new(API_URL)
 
       conn.post do |req|                           
-        req.url "#{api_url(path)}", apikey: ENV['BLING_API_KEY']
+        req.url "#{api_url(path)}", apikey: Bling::Api.apikey
         req.params['xml'] = resource.to_xml
       end
 

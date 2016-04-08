@@ -9,7 +9,7 @@ com apps em Ruby on Rails.
 Adicione esta linha no Gemfile do seu app:
 
 ```ruby
-gem 'bling-api', :git => 'git://github.com/tanoku/redcarpet.git'
+gem 'bling-api', :git => 'https://github.com/gersonazgo/bling-api.git'
 ```
 
 Então execute:
@@ -17,6 +17,12 @@ Então execute:
     $ bundle
 
 ## Instruções de uso
+
+Configure as suas credenciais de acesso ao Bling em `initializers/bling.rb`
+
+```ruby
+Bling::Api.apikey = ENV['BLING_API_KEY']
+```
 
 ### Nota Fiscal
 
