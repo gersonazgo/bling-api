@@ -7,7 +7,7 @@ module Bling
   module Api
     class NotaFiscal < Bling::Api::Base
 
-      attr_reader :serie, :numero, :loja, :numeroPedidoLoja, :tipo, :situacao, :contato, :vendedor, :dataEmissao, :valorNota, :chaveAcesso, :codigosRastreamento
+      attr_reader :serie, :numero, :loja, :numeroPedidoLoja, :tipo, :situacao, :contato, :vendedor, :dataEmissao, :valorNota, :chaveAcesso, :codigosRastreamento, :xml, :transporte
       
       def initialize(attributes)
         @serie = attributes["serie"]
@@ -21,7 +21,21 @@ module Bling
         @dataEmissao = attributes["dataEmissao"]
         @valorNota = attributes["valorNota"]
         @chaveAcesso = attributes["chaveAcesso"]
-        @codigosRastreamento = attributes["codigosRastreamento"]
+        @xml = attributes["xml"]
+        @linkDanfe = attributes["linkDanfe"]
+
+        # Objects
+        if attributes["codigosRastreamento"].is_a? Hash
+          @codigosRastreamento = Bling::Api::NotasFiscais::CodigoRastreamento.new(attributes["codigosRastreamento"])
+        else
+          @codigosRastreamento = nil
+        end
+        
+        unless attributes["transporte"].nil?
+          @transporte = Bling::Api::NotasFiscais::Transporte.new(attributes["transporte"])
+        else
+          @transporte = nil 
+        end
       end
 
       def self.find(numero, serie)
@@ -54,10 +68,6 @@ module Bling
         filters << "situacao[#{situacao}]" if situacao
         filters
       end
-
-      # def self.raise_error_from_response(response, type=BlingError)
-      #   super response, type
-      # end
 
     end
   end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bling.com.br/Api/v2/notasfiscais/page=1/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=dataEmissao%5B04/04/2016%20TO%2004/04/2016%5D%3Bsituacao%5B1%5D
+    uri: https://bling.com.br/Api/v2/notasfiscais/page=2/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=dataEmissao%5B04/04/2016%20TO%2004/04/2016%5D
     body:
       encoding: US-ASCII
       string: ''
@@ -25,15 +25,15 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '222'
+      - '99'
       Connection:
       - close
       Content-Type:
       - application/json
     body:
       encoding: ASCII-8BIT
-      string: '{"retorno":{"notasfiscais":[{"notafiscal":{"serie":"1","numero":"000001","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
-        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-04 00:00:00","valorNota":"64.90","chaveAcesso":null,"codigosRastreamento":[]}}]}}'
+      string: '{"retorno":{"erros":[{"erro":{"cod":14,"msg":"A informacao desejada
+        nao foi encontrada"}}]}}'
     http_version: 
-  recorded_at: Fri, 08 Apr 2016 14:57:15 GMT
+  recorded_at: Fri, 08 Apr 2016 14:57:16 GMT
 recorded_with: VCR 3.0.1

@@ -1,26 +1,22 @@
-# Bling::Api
+# Bling API
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bling/api`. To experiment with that code, run `bin/console` for an interactive prompt.
+Oi! Essa gem foi criada pra resolver os problemas de integração Bling (www.bling.com.br)
+com apps em Ruby on Rails.
 
-TODO: Delete this and the text above, and describe your gem
 
-## Installation
+## Instalação
 
-Add this line to your application's Gemfile:
+Adicione esta linha no Gemfile do seu app:
 
 ```ruby
-gem 'bling-api'
+gem 'bling-api', :git => 'git://github.com/tanoku/redcarpet.git'
 ```
 
-And then execute:
+Então execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install bling-api
-
-## Usage
+## Instruções de uso
 
 TODO: Write usage instructions here
 

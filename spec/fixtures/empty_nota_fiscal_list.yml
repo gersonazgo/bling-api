@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Apr 2016 16:01:08 GMT
+      - Fri, 08 Apr 2016 14:57:16 GMT
       Server:
       - Apache
       Vary:
@@ -35,5 +35,5 @@ http_interactions:
       string: '{"retorno":{"erros":[{"erro":{"cod":14,"msg":"A informacao desejada
         nao foi encontrada"}}]}}'
     http_version: 
-  recorded_at: Wed, 06 Apr 2016 16:01:07 GMT
+  recorded_at: Fri, 08 Apr 2016 14:57:15 GMT
 recorded_with: VCR 3.0.1

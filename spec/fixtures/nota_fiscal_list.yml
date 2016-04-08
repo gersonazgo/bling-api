@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Apr 2016 16:01:07 GMT
+      - Fri, 08 Apr 2016 14:57:15 GMT
       Server:
       - Apache
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '242'
+      - '441'
       Connection:
       - close
       Content-Type:
@@ -34,7 +34,10 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"retorno":{"notasfiscais":[{"notafiscal":{"serie":"1","numero":"000001","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
         AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-04 00:00:00","valorNota":"64.90","chaveAcesso":null,"codigosRastreamento":[]}},{"notafiscal":{"serie":"1","numero":"000002","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
-        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-06 00:00:00","valorNota":"49.00","chaveAcesso":null,"codigosRastreamento":[]}}]}}'
+        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-06 00:00:00","valorNota":"98.90","chaveAcesso":null,"codigosRastreamento":{"codigoRastreamento":"PJ643790435BR"},"transporte":{"servico_correios":"PAC","volumes":[{"idServico":"512679065","servico":"PAC","codigoRastreamento":"PJ643790435BR","valorFretePrevisto":"8.00","dataSaida":"2016-04-06","prazoEntregaPrevisto":"5"}]}}},{"notafiscal":{"serie":"1","numero":"000003","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
+        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-08 00:00:00","valorNota":"99.80","chaveAcesso":null,"codigosRastreamento":[]}},{"notafiscal":{"serie":"1","numero":"000004","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
+        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-07 00:00:00","valorNota":"49.90","chaveAcesso":null,"codigosRastreamento":{"codigoRastreamento":"DW111802513BR"},"transporte":{"servico_correios":"SEDEX
+        (CONTRATO)","volumes":[{"idServico":"512679064","servico":"SEDEX (CONTRATO)","codigoRastreamento":"DW111802513BR","valorFretePrevisto":"13.65","dataSaida":"2016-04-07","prazoEntregaPrevisto":"1"}]}}}]}}'
     http_version: 
-  recorded_at: Wed, 06 Apr 2016 16:01:07 GMT
+  recorded_at: Fri, 08 Apr 2016 14:57:15 GMT
 recorded_with: VCR 3.0.1

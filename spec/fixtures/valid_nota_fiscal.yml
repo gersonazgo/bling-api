@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bling.com.br/Api/v2/notafiscal/1/1/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=
+    uri: https://bling.com.br/Api/v2/notafiscal/4/1/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=
     body:
       encoding: US-ASCII
       string: ''
@@ -19,21 +19,22 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Apr 2016 16:01:07 GMT
+      - Fri, 08 Apr 2016 14:57:15 GMT
       Server:
       - Apache
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '235'
+      - '363'
       Connection:
       - close
       Content-Type:
       - application/json
     body:
       encoding: ASCII-8BIT
-      string: '{"retorno":{"notasfiscais":[{"notafiscal":{"serie":"1","numero":"000001","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
-        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-04 00:00:00","valorNota":"64.90","chaveAcesso":null,"xml":null,"linkDanfe":null,"codigosRastreamento":[]}}]}}'
+      string: '{"retorno":{"notasfiscais":[{"notafiscal":{"serie":"1","numero":"000004","loja":"0","numeroPedidoLoja":null,"tipo":"S","situacao":"Pendente","contato":"GERSON
+        AZEVEDO GOMES","vendedor":"","dataEmissao":"2016-04-07 00:00:00","valorNota":"49.90","chaveAcesso":null,"xml":null,"linkDanfe":null,"codigosRastreamento":{"codigoRastreamento":"DW111802513BR"},"transporte":{"servico_correios":"SEDEX
+        (CONTRATO)","volumes":[{"idServico":"512679064","servico":"SEDEX (CONTRATO)","codigoRastreamento":"DW111802513BR","valorFretePrevisto":"13.65","dataSaida":"2016-04-07","prazoEntregaPrevisto":"1"}]}}}]}}'
     http_version: 
-  recorded_at: Wed, 06 Apr 2016 16:01:06 GMT
+  recorded_at: Fri, 08 Apr 2016 14:57:14 GMT
 recorded_with: VCR 3.0.1
