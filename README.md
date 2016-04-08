@@ -47,7 +47,35 @@ notas_fiscais = Bling::Api::NotaFiscal.all
 # 8 - Registrada
 # 9 - Enviada - Aguardando protocolo
 # 10 - Denegada
-notas_fiscais = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2016,4,4), data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
+notas_fiscais = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2016,4,4), 
+data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
 
 # Inserir uma nova nota fiscal se dá apenas através do pedido.
+```
+
+### Pedido
+
+Você pode buscar um pedido específico através do comando `Bling::Api::Pedido.find` ou listar todos com `Bling::Api::Pedido.all`. 
+
+```ruby
+# Busca um pedido através de seu número
+pedido = Bling::Api::NotaFiscal.find(numero: 1)
+
+# Busca todos os pedidos
+notas_fiscais = Bling::Api::Pedido.all
+
+# Busca pedidos com filtros e paginação 
+# Situações possíveis 
+# 0 - Em Aberto
+# 1 - Atendido
+# 2 - Cancelado
+# 3 - Em andamento
+# 4 - Venda Agenciada
+# 10 - Em digitação
+# 11 - Verificado
+pedidos = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2016,4,4), 
+data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
+
+# Salva um pedido no Bling.
+# to-do
 ```
