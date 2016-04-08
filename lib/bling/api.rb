@@ -1,11 +1,15 @@
 require "bling/api/base"
+require "bling/api/codigo_rastreamento"
 require "bling/api/exceptions"
 require "bling/api/nota_fiscal"
+require "bling/api/pedido"
+require "bling/api/transporte"
 require "bling/api/version"
-require "bling/api/notas_fiscais/codigo_rastreamento"
-require "bling/api/notas_fiscais/transporte"
-require "bling/api/notas_fiscais/transportes/endereco_entrega"
-require "bling/api/notas_fiscais/transportes/volume"
+require "bling/api/pedidos/cliente"
+require "bling/api/pedidos/item"
+require "bling/api/pedidos/parcela"
+require "bling/api/transportes/endereco_entrega"
+require "bling/api/transportes/volume"
 
 
 

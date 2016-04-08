@@ -25,16 +25,23 @@ describe Bling::Api::NotaFiscal do
         expect(nota_fiscal.chaveAcesso).to eq(nil)
         expect(nota_fiscal.codigosRastreamento.codigoRastreamento).to eq("DW111802513BR")
 
+         # Check CodigoRastreamento fields
+        codigosRastreamento = nota_fiscal.codigosRastreamento
+        expect(codigosRastreamento.class).to eq(Bling::Api::CodigoRastreamento)
+        
+        expect(codigosRastreamento.codigoRastreamento).to eq("DW111802513BR")
+
+
         # Check transporte fields
         transporte = nota_fiscal.transporte
-        expect(transporte.class).to eq(Bling::Api::NotasFiscais::Transporte)
+        expect(transporte.class).to eq(Bling::Api::Transporte)
 
         expect(transporte.transportadora).to eq(nil)
         expect(transporte.servico_correios).to eq("SEDEX (CONTRATO)")
 
         # Check volume fields
         volume = transporte.volumes.first
-        expect(volume.class).to eq(Bling::Api::NotasFiscais::Transportes::Volume)
+        expect(volume.class).to eq(Bling::Api::Transportes::Volume)
 
         expect(volume.idServico).to eq("512679064")
         expect(volume.servico).to eq("SEDEX (CONTRATO)")

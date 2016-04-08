@@ -26,13 +26,13 @@ module Bling
 
         # Objects
         if attributes["codigosRastreamento"].is_a? Hash
-          @codigosRastreamento = Bling::Api::NotasFiscais::CodigoRastreamento.new(attributes["codigosRastreamento"])
+          @codigosRastreamento = Bling::Api::CodigoRastreamento.new(attributes["codigosRastreamento"])
         else
           @codigosRastreamento = nil
         end
         
         unless attributes["transporte"].nil?
-          @transporte = Bling::Api::NotasFiscais::Transporte.new(attributes["transporte"])
+          @transporte = Bling::Api::Transporte.new(attributes["transporte"])
         else
           @transporte = nil 
         end
