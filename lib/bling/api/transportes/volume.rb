@@ -8,9 +8,9 @@ module Bling
     module Transportes
       class Volume
 
-        attr_reader :idServico, :servico, :codigoRastreamento, :dataSaida, :prazoEntregaPrevisto, :valorFretePrevisto
+        attr_accessor :idServico, :servico, :codigoRastreamento, :dataSaida, :prazoEntregaPrevisto, :valorFretePrevisto
         
-        def initialize(attributes)
+        def initialize(attributes={})
           @idServico = attributes["idServico"]
           @servico = attributes["servico"]
           @codigoRastreamento = attributes["codigoRastreamento"]

@@ -7,9 +7,9 @@ module Bling
   module Api
     class NotaFiscal < Bling::Api::Base
 
-      attr_reader :serie, :numero, :loja, :numeroPedidoLoja, :tipo, :situacao, :contato, :vendedor, :dataEmissao, :valorNota, :chaveAcesso, :codigosRastreamento, :xml, :transporte
+      attr_accessor :serie, :numero, :loja, :numeroPedidoLoja, :tipo, :situacao, :contato, :vendedor, :dataEmissao, :valorNota, :chaveAcesso, :codigosRastreamento, :xml, :transporte
       
-      def initialize(attributes)
+      def initialize(attributes={})
         @serie = attributes["serie"]
         @numero = attributes["numero"]
         @loja = attributes["loja"]

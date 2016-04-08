@@ -7,11 +7,12 @@ module Bling
   module Api
     class Transporte
 
-      attr_reader :transportadora, :tipo_frete, :servico_correios, :enderecoEntrega, :volumes
+      attr_accessor :transportadora, :tipo_frete, :servico_correios, :enderecoEntrega, :peso_bruto, :volumes
       
-      def initialize(attributes)
+      def initialize (attributes={})
         @transportadora = attributes["transportadora"]
         @tipo_frete = attributes["tipo_frete"]
+        @peso_bruto = attributes["peso_bruto"]
         @servico_correios = attributes["servico_correios"]
 
         # Objects

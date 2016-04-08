@@ -105,35 +105,45 @@ describe Bling::Api::Pedido do
     it "returns a valid list of Pedido" do
       VCR.use_cassette('pedido_list') do
         result = Bling::Api::Pedido.all
+        expect(result.length).to eq(3)
+        expect(result.class).to eq(Array)
+        expect(result.first.class).to eq(Bling::Api::Pedido)
+      end
+    end
+
+    it "returns a valid list of Pedido with filters" do
+      VCR.use_cassette('pedido_list_with_filters') do
+        result = Bling::Api::Pedido.all(data_emissao_from: Date.new(2016,4,4), data_emissao_to: Date.new(2016,4,8), situacao: 1, page: 1)
+
         expect(result.length).to eq(2)
         expect(result.class).to eq(Array)
         expect(result.first.class).to eq(Bling::Api::Pedido)
       end
     end
 
-    # it "returns a valid list of NotaFiscal with filters" do
-    #   VCR.use_cassette('nota_fiscal_list_with_filters') do
-    #     result = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2016,4,4), data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
+    it "returns an empty list of Pedido" do
+      VCR.use_cassette('empty_pedido_list') do
+        result = Bling::Api::Pedido.all(data_emissao_from: Date.new(2015,4,4), data_emissao_to: Date.new(2015,4,4))
+        expect(result.length).to eq(0)
+        expect(result.class).to eq(Array)
+      end
+    end
 
-    #     expect(result.length).to eq(1)
-    #     expect(result.class).to eq(Array)
-    #     expect(result.first.class).to eq(Bling::Api::NotaFiscal)
-    #   end
-    # end
+    it "returns an error with invalid page" do
+      VCR.use_cassette('pedido_list_with_an_invalid_page') do
+        expect { Bling::Api::Pedido.all(data_emissao_from: Date.new(2016,4,4), data_emissao_to: Date.new(2016,4,8), situacao: 1, page: 2) }.to raise_error Bling::Api::BlingResourceNotFound
+      end
+    end
+  end
 
-    # it "returns an empty list of NotaFiscal" do
-    #   VCR.use_cassette('empty_nota_fiscal_list') do
-    #     result = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2015,4,4), data_emissao_to: Date.new(2015,4,4))
-    #     expect(result.length).to eq(0)
-    #     expect(result.class).to eq(Array)
-    #   end
-    # end
+  describe "post" do 
+    it "creates a new Pedido" do
+      VCR.use_cassette('pedido_create') do
+        pedido = create_pedido
+        pedido.save
+      end
+    end
 
-    # it "returns an error with invalid page" do
-    #   VCR.use_cassette('nota_fiscal_list_with_an_invalid_page') do
-    #     expect { Bling::Api::NotaFiscal.all(page: 2, data_emissao_from: Date.new(2016,4,4), data_emissao_to: Date.new(2016,4,4)) }.to raise_error Bling::Api::BlingResourceNotFound
-    #   end
-    # end
   end
 
 

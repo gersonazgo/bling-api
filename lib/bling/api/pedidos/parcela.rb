@@ -8,12 +8,13 @@ module Bling
     module Pedidos
       class Parcela
 
-        attr_reader :valor, :dataVencimento, :obs
+        attr_accessor :valor, :dataVencimento, :obs, :dias
         
-        def initialize(attributes)
+        def initialize(attributes={})
           @valor = attributes["valor"]
           @dataVencimento = attributes["dataVencimento"]
           @obs = attributes["obs"]
+          @dias = attributes["dias"]
         end
 
       end

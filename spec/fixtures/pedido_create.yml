@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bling.com.br/Api/v2/pedidos/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&xml=%3Cpedido%3E%3Cnumero%3E2%3C/numero%3E%3CnumeroLoja%20xsi:nil=%22true%22/%3E%3Cloja%3E9%3C/loja%3E%3CnatOperacao%3EVenda%20de%20Mercadorias%3C/natOperacao%3E%3CvlrFrete%3E0.00%3C/vlrFrete%3E%3CvlrDesconto%3E0%3C/vlrDesconto%3E%3Cobs%3E%3C/obs%3E%3CobsInternas%3E%3C/obsInternas%3E%3Ccliente%3E%3Cnome%3ETESTE%20GOMES%3C/nome%3E%3CtipoPessoa%3EF%3C/tipoPessoa%3E%3CcpfCnpj%3E018.400.050-50%3C/cpfCnpj%3E%3Cie%3E%3C/ie%3E%3CieRg%3E%3C/ieRg%3E%3Ccontribuinte%3E9%3C/contribuinte%3E%3Cendereco%3ERua%20Vicente%20da%20Fontoura%3C/endereco%3E%3Cnumero%3E1021%3C/numero%3E%3Ccomplemento%3E302%3C/complemento%3E%3Cbairro%3ESANTANA%3C/bairro%3E%3Ccep%3E90.640-001%3C/cep%3E%3Ccidade%3EPorto%20Alegre%3C/cidade%3E%3Cuf%3ERS%3C/uf%3E%3Cfone%20xsi:nil=%22true%22/%3E%3Cemail%3E%3C/email%3E%3C/cliente%3E%3Ctransporte%3E%3Ctransportadora%20xsi:nil=%22true%22/%3E%3CtipoFrete%20xsi:nil=%22true%22/%3E%3CservicoCorreios%3ESEDEX%20(CONTRATO)%3C/servicoCorreios%3E%3CpesoBruto%20xsi:nil=%22true%22/%3E%3CdadosEtiqueta%3E%3Cnome%3ETESTE%20GOMES%3C/nome%3E%3Cendereco%3ERua%20Vicente%20da%20Fontoura%3C/endereco%3E%3Cnumero%3E1021%3C/numero%3E%3Ccomplemento%3E302%3C/complemento%3E%3Cmunicipio%3EPorto%20Alegre%3C/municipio%3E%3Cuf%3ERS%3C/uf%3E%3Ccep%3E90.640-001%3C/cep%3E%3Cbairro%3ESANTANA%3C/bairro%3E%3C/dadosEtiqueta%3E%3C/transporte%3E%3Citens%3E%3Citem%3E%3Ccodigo%3EPJ002CR%3C/codigo%3E%3Cdescricao%3EPorta-Jaleco%20Doodle%3C/descricao%3E%3Cun%3EUN%3C/un%3E%3Cqtde%3E1.0000%3C/qtde%3E%3CvlrUnit%3E49.9000000000%3C/vlrUnit%3E%3C/item%3E%3C/itens%3E%3Cparcelas%3E%3Cparcela%3E%3Cdias%20xsi:nil=%22true%22/%3E%3Cdata%3E2016-05-08%2000:00:00%3C/data%3E%3Cvlr%3E16.64%3C/vlr%3E%3Cobs%3E%3C/obs%3E%3C/parcela%3E%3C/parcelas%3E%3C/pedido%3E
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 08 Apr 2016 19:41:10 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '88'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"retorno":{"erros":{"erro":{"cod":12,"msg":"Parametro(s) e(sao) invalido(s)"}}}}'
+    http_version: 
+  recorded_at: Fri, 08 Apr 2016 19:41:09 GMT
+recorded_with: VCR 3.0.1

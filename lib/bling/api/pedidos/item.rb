@@ -8,9 +8,9 @@ module Bling
     module Pedidos
       class Item
 
-        attr_reader :codigo, :descricao, :quantidade, :valorunidade, :precocusto, :descontoItem, :un
+        attr_accessor :codigo, :descricao, :quantidade, :valorunidade, :precocusto, :descontoItem, :un
         
-        def initialize(attributes)
+        def initialize(attributes={})
           @codigo = attributes["codigo"]
           @descricao = attributes["descricao"]
           @quantidade = attributes["quantidade"]

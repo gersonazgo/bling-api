@@ -57,6 +57,19 @@ module Bling
         # Returns the elements
         elements
       end
+
+      def save attributes={}
+        response = Bling::Api.post("#{path}/", self)
+
+        if response['retorno']['erros'].nil?
+          self
+        else
+          raise BlingResourceNotFound.new(Bling::Api.get_error_from_response(response))
+        end
+      end
+
+
+
     end
   end
 end

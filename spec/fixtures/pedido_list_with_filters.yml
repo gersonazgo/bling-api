@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bling.com.br/Api/v2/pedidos/page=1/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=
+    uri: https://bling.com.br/Api/v2/pedidos/page=1/json/?apikey=1df869fc0f712d9032036833e27b29a851954261&filters=dataEmissao%5B04/04/2016%20TO%2008/04/2016%5D%3Bsituacao%5B1%5D
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '814'
+      - '724'
       Connection:
       - close
       Content-Type:
@@ -44,11 +44,7 @@ http_interactions:
         00:00:00","obs":""}},{"parcela":{"valor":"16.63","dataVencimento":"2016-06-08
         00:00:00","obs":""}},{"parcela":{"valor":"16.63","dataVencimento":"2016-07-08
         00:00:00","obs":""}}],"nota":{"serie":"1","numero":"000005","dataEmissao":"2016-04-08
-        00:00:00","situacao":"1","chaveAcesso":null},"transporte":{"servico_correios":"PAC","volumes":[{"idServico":"512679065","servico":"PAC","codigoRastreamento":"PJ644450177BR","valorFretePrevisto":"8.00","dataSaida":"2016-04-08","prazoEntregaPrevisto":"5"}]},"codigosRastreamento":{"codigoRastreamento":"PJ644450177BR"}}},{"pedido":{"desconto":"0","observacoes":"","observacaointerna":"","data":"2016-04-08","numero":"3","vendedor":"","valorfrete":"0.00","totalprodutos":"49.90","totalvenda":"49.90","situacao":"Em
-        Aberto","cliente":{"nome":"GERSON AZEVEDO GOMES","cnpj":"018.400.050-50","ie":"","endereco":"Rua
-        Vicente da Fontoura","numero":"1021","complemento":"302","cidade":"Porto Alegre","bairro":"SANTANA","cep":"90.640-001","uf":"RS","email":""},"itens":[{"item":{"codigo":"PJ007CR","descricao":"Porta-Jaleco
-        Lines","quantidade":"1.0000","valorunidade":"49.9000000000","precocusto":"0.0000000000","descontoItem":"0.00","un":"UN"}}],"transporte":{"servico_correios":"PAC","volumes":[{"idServico":"512679065","servico":"PAC","codigoRastreamento":"PJ645484605BR","valorFretePrevisto":"8.00","dataSaida":"2016-04-08","prazoEntregaPrevisto":"5"}],"enderecoEntrega":{"nome":"Juliana
-        Sozua","endereco":"Rua Alianca","numero":"123","complemento":"2","cidade":"Portalegre","bairro":"Sambao","cep":"90.640-001","uf":"RN"}},"codigosRastreamento":{"codigoRastreamento":"PJ645484605BR"}}}]}}'
+        00:00:00","situacao":"1","chaveAcesso":null},"transporte":{"servico_correios":"PAC","volumes":[{"idServico":"512679065","servico":"PAC","codigoRastreamento":"PJ644450177BR","valorFretePrevisto":"8.00","dataSaida":"2016-04-08","prazoEntregaPrevisto":"5"}]},"codigosRastreamento":{"codigoRastreamento":"PJ644450177BR"}}}]}}'
     http_version: 
   recorded_at: Fri, 08 Apr 2016 18:13:32 GMT
 recorded_with: VCR 3.0.1

@@ -29,6 +29,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "byebug"
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "awesome_print"
+  spec.add_development_dependency "factory_girl"
   spec.add_dependency "faraday"
   spec.add_dependency "json"
+  spec.add_dependency "gyoku"
 end

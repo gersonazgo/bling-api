@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Apr 2016 17:16:30 GMT
+      - Fri, 08 Apr 2016 18:13:32 GMT
       Server:
       - Apache
       Vary:
@@ -41,5 +41,5 @@ http_interactions:
         00:00:00","obs":""}}],"nota":{"serie":"1","numero":"000005","dataEmissao":"2016-04-08
         00:00:00","situacao":"1","chaveAcesso":null},"transporte":{"servico_correios":"PAC","volumes":[{"idServico":"512679065","servico":"PAC","codigoRastreamento":"PJ644450177BR","valorFretePrevisto":"8.00","dataSaida":"2016-04-08","prazoEntregaPrevisto":"5"}]},"codigosRastreamento":{"codigoRastreamento":"PJ644450177BR"}}}]}}'
     http_version: 
-  recorded_at: Fri, 08 Apr 2016 17:16:29 GMT
+  recorded_at: Fri, 08 Apr 2016 18:13:31 GMT
 recorded_with: VCR 3.0.1

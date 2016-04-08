@@ -8,9 +8,9 @@ module Bling
     module Transportes
       class EnderecoEntrega
 
-        attr_reader :nome, :endereco, :numero, :complemento, :cidade, :bairro, :cep, :uf
+        attr_accessor :nome, :endereco, :numero, :complemento, :cidade, :bairro, :cep, :uf
         
-        def initialize(attributes)
+        def initialize(attributes={})
           @nome = attributes["nome"]
           @endereco = attributes["endereco"]
           @numero = attributes["numero"]

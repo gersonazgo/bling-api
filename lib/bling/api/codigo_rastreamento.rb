@@ -7,9 +7,9 @@ module Bling
   module Api
     class CodigoRastreamento
 
-      attr_reader :codigoRastreamento
+      attr_accessor :codigoRastreamento
       
-      def initialize(attributes)
+      def initialize(attributes={})
         @codigoRastreamento = attributes["codigoRastreamento"]
       end
 
