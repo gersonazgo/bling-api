@@ -72,7 +72,7 @@ notas_fiscais = Bling::Api::Pedido.all
 # 4 - Venda Agenciada
 # 10 - Em digitação
 # 11 - Verificado
-pedidos = Bling::Api::NotaFiscal.all(data_emissao_from: Date.new(2016,4,4), 
+pedidos = Bling::Api::Pedido.all(data_emissao_from: Date.new(2016,4,4), 
 data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
 
 # Salva um pedido no Bling.
