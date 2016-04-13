@@ -78,6 +78,7 @@ data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
 
 # Salva um pedido no Bling.
 Pedido.save
+```
 
 ## Colaboradores
 A equipe do Porta-Jaleco (www.portajaleco.com.br) é responsável pela manutenção desta Gem.
