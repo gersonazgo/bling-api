@@ -1,7 +1,6 @@
 # Bling API
 
-Oi! Essa gem foi criada pra resolver os problemas de integração Bling (www.bling.com.br)
-com apps em Ruby on Rails.
+A gem ideal para quem quer enviar Notas Fiscais e Pedidos da sua loja/app diretamente para o Bling (www.bling.com.br)
 
 
 ## Instalação
