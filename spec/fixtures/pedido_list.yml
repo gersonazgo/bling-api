@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Apr 2016 18:13:33 GMT
+      - Mon, 11 Apr 2016 18:21:44 GMT
       Server:
       - Apache
       Vary:
@@ -50,5 +50,5 @@ http_interactions:
         Lines","quantidade":"1.0000","valorunidade":"49.9000000000","precocusto":"0.0000000000","descontoItem":"0.00","un":"UN"}}],"transporte":{"servico_correios":"PAC","volumes":[{"idServico":"512679065","servico":"PAC","codigoRastreamento":"PJ645484605BR","valorFretePrevisto":"8.00","dataSaida":"2016-04-08","prazoEntregaPrevisto":"5"}],"enderecoEntrega":{"nome":"Juliana
         Sozua","endereco":"Rua Alianca","numero":"123","complemento":"2","cidade":"Portalegre","bairro":"Sambao","cep":"90.640-001","uf":"RN"}},"codigosRastreamento":{"codigoRastreamento":"PJ645484605BR"}}}]}}'
     http_version: 
-  recorded_at: Fri, 08 Apr 2016 18:13:32 GMT
+  recorded_at: Mon, 11 Apr 2016 18:21:43 GMT
 recorded_with: VCR 3.0.1

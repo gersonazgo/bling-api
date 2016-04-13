@@ -79,22 +79,6 @@ module Bling
       end
 
 
-      def self.path
-        "pedidos"
-      end
-
-      def self.object_type
-        "pedido"
-      end
-
-      def path
-        "pedidos"
-      end
-
-      def object_type
-        "pedido"
-      end
-
       def self.set_filters attributes
         data_emissao_from = attributes[:data_emissao_from]
         data_emissao_to   = attributes[:data_emissao_to]
@@ -119,79 +103,98 @@ module Bling
         end
 
         pedido = {
-          "pedido": {
-            "numero": self.numero,
-            "numero_loja": self.numeroPedidoLoja,
-            "loja": self.loja,
-            "nat_operacao": self.nat_operacao,
-            "vlr_frete": self.valorfrete,
-            "vlr_desconto": self.desconto,
-            "obs": self.observacoes,
-            "obs_internas": self.observacaointerna,
-            "cliente":{
-              "nome": self.cliente.nome,
-              "tipoPessoa": self.cliente.tipoPessoa,
-              "cpf_cnpj": self.cliente.cnpj,
-              "ie": self.cliente.ie,
-              "ie_rg": self.cliente.ie,
-              "contribuinte": self.cliente.contribuinte,
-              "endereco": self.cliente.endereco,
-              "numero": self.cliente.numero,
-              "complemento": self.cliente.complemento,
-              "bairro": self.cliente.bairro,
-              "cep": self.cliente.cep,
-              "cidade": self.cliente.cidade,
-              "uf": self.cliente.uf,
-              "fone": self.cliente.fone,
-              "email": self.cliente.email
-            },
-            "transporte":{
-              "transportadora": self.transporte.transportadora,
-              "tipo_frete": self.transporte.tipo_frete,
-              "servico_correios": self.transporte.servico_correios,
-              "peso_bruto": self.transporte.peso_bruto,
-              "dados_etiqueta":{
-                "nome": enderecoEntrega.nome,
-                "endereco": enderecoEntrega.endereco,
-                "numero": enderecoEntrega.numero,
-                "complemento": enderecoEntrega.complemento,
-                "municipio": enderecoEntrega.cidade,
-                "uf": enderecoEntrega.uf,
-                "cep": enderecoEntrega.cep,
-                "bairro": enderecoEntrega.bairro
-              }
+          "numero": self.numero,
+          "numero_loja": self.numeroPedidoLoja,
+          "loja": self.loja,
+          "nat_operacao": self.nat_operacao,
+          "vlr_frete": self.valorfrete,
+          "vlr_desconto": self.desconto,
+          "obs": self.observacoes,
+          "obs_internas": self.observacaointerna,
+          "cliente":{
+            "nome": self.cliente.nome,
+            "tipoPessoa": self.cliente.tipoPessoa,
+            "cpf_cnpj": self.cliente.cnpj,
+            "ie": "",
+            "ie_rg": self.cliente.cnpj,
+            "contribuinte": self.cliente.contribuinte,
+            "endereco": self.cliente.endereco,
+            "numero": self.cliente.numero,
+            "complemento": self.cliente.complemento,
+            "bairro": self.cliente.bairro,
+            "cep": self.cliente.cep,
+            "cidade": self.cliente.cidade,
+            "uf": self.cliente.uf,
+            "fone": self.cliente.fone,
+            "email": self.cliente.email
+          },
+          "transporte":{
+            "transportadora": self.transporte.transportadora,
+            "tipo_frete": self.transporte.tipo_frete,
+            "servico_correios": self.transporte.servico_correios,
+            "peso_bruto": self.transporte.peso_bruto,
+            "dados_etiqueta":{
+              "nome": enderecoEntrega.nome,
+              "endereco": enderecoEntrega.endereco,
+              "numero": enderecoEntrega.numero,
+              "complemento": enderecoEntrega.complemento,
+              "municipio": enderecoEntrega.cidade,
+              "uf": enderecoEntrega.uf,
+              "cep": enderecoEntrega.cep,
+              "bairro": enderecoEntrega.bairro
             }
           }
         }
 
-        pedido[:pedido][:itens] = []
+        pedido[:itens] = []
         self.itens.each do |item|
           item = { 
-            "item": {
               "codigo": item.codigo, 
               "descricao": item.descricao, 
               "un": item.un, 
               "qtde": item.quantidade, 
               "vlr_unit": item.valorunidade
-            }
           }
-          pedido[:pedido][:itens] << item
+          pedido[:itens] << item
         end
 
-        pedido[:pedido][:parcelas] = []
+        pedido[:parcelas] = []
         self.parcelas.each do |parcela|
           parcela = { 
-            "parcela": {
               "dias": parcela.dias, 
-              "data": parcela.dataVencimento, 
+              "data": parcela.dataVencimento.strftime("%d/%m/%Y"), 
               "vlr": parcela.valor, 
               "obs": parcela.obs, 
-            }
           }
-          pedido[:pedido][:parcelas] << parcela
+          pedido[:parcelas] << parcela
         end
 
-        pedido.to_xml
+        pedido.to_xml(root: 'pedido', dasherize: false).gsub('iten>', 'item>').gsub("\n", "").gsub("\"", "'")
+        # byebug
+      end
+
+       def self.save_path
+        "pedido"
+      end
+
+      def self.path
+        "pedidos"
+      end
+
+      def self.object_type
+        "pedido"
+      end
+
+      def save_path
+        "pedido"
+      end
+
+      def path
+        "pedidos"
+      end
+
+      def object_type
+        "pedido"
       end
 
     end

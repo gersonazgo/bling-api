@@ -6,7 +6,7 @@ FactoryGirl.define do
     data "2016-04-08"
     numero "2"
     vendedor ""
-    valorfrete "0.00"
+    valorfrete "10.00"
     totalprodutos "49.90"
     totalvenda "49.90"
     situacao "Atendido"

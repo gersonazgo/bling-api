@@ -1,5 +1,7 @@
+require 'httparty'
 require "bling/api/base"
 require "bling/api/codigo_rastreamento"
+require "bling/api/engine"
 require "bling/api/exceptions"
 require "bling/api/nota_fiscal"
 require "bling/api/pedido"
@@ -34,14 +36,39 @@ module Bling
     end
 
 
-    def self.post path, resource
+    def self.post path, resource, attributes={}
+
+
+      options = {
+        apikey: Bling::Api.apikey,
+        xml: resource.to_xml,
+        gerarnfe: false
+      }
+
+
+      # if Rails.env.development?
+      #   puts options
+      # end
+
 
       conn = Faraday.new(API_URL)
-
+  
       conn.post do |req|                           
-        req.url "#{api_url(path)}", apikey: Bling::Api.apikey
-        req.params['xml'] = resource.to_xml
+        req.url "#{api_url(path)}"
+        # req.headers['Content-Type'] = 'application/x-www-form-urlencoded'
+       
+        req.body = options
       end
+
+      # if nfe = attributes[:nfe]
+      #   options.merge! gerarnfe: 'true'
+      #   byebug
+      # end
+      
+      # response = HTTParty.post api_url(File.join(API_URL, path)), query: { apikey: Bling::Api.apikey }, body: { xml: resource.to_xml }
+      
+      # response = HTTParty.post File.join(API_URL, api_url(path)), query: { apikey: Bling::Api.apikey, xml: resource.to_xml } #, body: {  }
+
 
       # unless body.is_a? Hash
       #   body = {}

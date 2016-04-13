@@ -59,8 +59,9 @@ module Bling
       end
 
       def save attributes={}
-        response = Bling::Api.post("#{path}/", self)
+        response = Bling::Api.post("#{save_path}/", self, attributes)
 
+        response = JSON.parse(response.body)
         if response['retorno']['erros'].nil?
           self
         else

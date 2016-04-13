@@ -19,9 +19,10 @@ def create_pedido
   volume = FactoryGirl.build(:volume)
   transporte = FactoryGirl.build(:transporte, volumes: [volume])
 
-  item = FactoryGirl.build(:item) 
+  item = FactoryGirl.build(:item)
+  item_2 = FactoryGirl.build(:item, codigo: "PJ006CR", descricao: "Porta-Jaleco Flamingo") 
   parcela = FactoryGirl.build(:parcela) 
   cliente = FactoryGirl.build(:cliente) 
 
-  pedido = FactoryGirl.build(:pedido, transporte: transporte, itens:[item], parcelas: [parcela], cliente: cliente)
+  pedido = FactoryGirl.build(:pedido, transporte: transporte, itens:[item, item_2], parcelas: [parcela], cliente: cliente)
 end
