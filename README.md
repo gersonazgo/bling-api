@@ -78,6 +78,8 @@ data_emissao_to: Date.new(2016,4,4), situacao: 1, page: 1)
 # Salva um pedido no Bling.
 Pedido.save
 ```
+## Agradecimentos
+Agradecemos aos criadores das gems https://github.com/organisys/bling-ruby e https://github.com/arielschvartz/Bling-Rails que usamos como referência. Thanks, guys!
 
 ## Colaboradores
 A equipe do Porta-Jaleco (www.portajaleco.com.br) é responsável pela manutenção desta Gem.
