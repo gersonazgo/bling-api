@@ -58,7 +58,7 @@ Você pode buscar um pedido específico através do comando `Bling::Api::Pedido.
 
 ```ruby
 # Busca um pedido através de seu número
-pedido = Bling::Api::NotaFiscal.find(numero: 1)
+pedido = Bling::Api::Pedido.find(numero: 1)
 
 # Busca todos os pedidos
 notas_fiscais = Bling::Api::Pedido.all
