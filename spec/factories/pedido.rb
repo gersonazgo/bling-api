@@ -3,7 +3,7 @@ FactoryGirl.define do
     desconto "0"
     observacoes ""
     observacaointerna ""
-    data "2016-04-08"
+    data Date.new(2016,4,13)
     numero "2"
     vendedor ""
     valorfrete "10.00"

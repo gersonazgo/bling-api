@@ -105,6 +105,7 @@ module Bling
         pedido = {
           "numero": self.numero,
           "numero_loja": self.numeroPedidoLoja,
+          "data": self.data.strftime("%d/%m/%Y"),
           "loja": self.loja,
           "nat_operacao": self.nat_operacao,
           "vlr_frete": self.valorfrete,
