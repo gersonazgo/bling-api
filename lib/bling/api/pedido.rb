@@ -10,6 +10,8 @@ module Bling
       attr_accessor :desconto, :observacoes, :observacaointerna, :data, :numeroPedidoLoja, :numero, :situacao, :valorfrete, :vendedor, :totalprodutos, :totalvenda, :dataPrevista, :tipoIntegracao, :cliente, :itens, :parcelas, :nota, :transporte, :codigosRastreamento, :loja, :nat_operacao
       
       def initialize(attributes={})
+        attributes = attributes.deep_stringify_keys
+
         @desconto = attributes["desconto"]
         @observacoes = attributes["observacoes"]
         @observacaointerna = attributes["observacaointerna"]
@@ -26,7 +28,6 @@ module Bling
         @loja = attributes["loja"] || "9"
         @nat_operacao = attributes["nat_operacao"] || "Venda de Mercadorias"
         byebug
-
         # Objects
         if attributes["cliente"].is_a? Hash
           @cliente = Bling::Api::Pedidos::Cliente.new(attributes["cliente"])

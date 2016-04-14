@@ -25,5 +25,7 @@ def create_pedido
   parcela = FactoryGirl.build(:parcela) 
   cliente = FactoryGirl.build(:cliente) 
 
+
+  # pedido = Bling::Api::Pedido.new(transporte: transporte, itens:[item, item_2], parcelas: [parcela], cliente: cliente)
   pedido = FactoryGirl.build(:pedido, transporte: transporte, itens:[item, item_2], parcelas: [parcela], cliente: cliente)
 end
