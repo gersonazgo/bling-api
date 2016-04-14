@@ -11,6 +11,8 @@ module Bling
         attr_accessor :nome, :cnpj, :ie, :endereco, :numero, :complemento, :cidade, :bairro, :cep, :uf, :email, :tipoPessoa, :fone, :contribuinte     
            
         def initialize(attributes={})
+          attributes = attributes.deep_stringify_keys
+          
           @nome = attributes["nome"]
           @cnpj = attributes["cnpj"]
           @ie = attributes["ie"]

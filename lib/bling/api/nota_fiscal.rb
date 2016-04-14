@@ -10,6 +10,9 @@ module Bling
       attr_accessor :serie, :numero, :loja, :numeroPedidoLoja, :tipo, :situacao, :contato, :vendedor, :dataEmissao, :valorNota, :chaveAcesso, :codigosRastreamento, :xml, :transporte
       
       def initialize(attributes={})
+
+        attributes = attributes.deep_stringify_keys
+
         @serie = attributes["serie"]
         @numero = attributes["numero"]
         @loja = attributes["loja"]

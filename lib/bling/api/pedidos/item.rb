@@ -11,6 +11,8 @@ module Bling
         attr_accessor :codigo, :descricao, :quantidade, :valorunidade, :precocusto, :descontoItem, :un
         
         def initialize(attributes={})
+          attributes = attributes.deep_stringify_keys
+          
           @codigo = attributes["codigo"]
           @descricao = attributes["descricao"]
           @quantidade = attributes["quantidade"]

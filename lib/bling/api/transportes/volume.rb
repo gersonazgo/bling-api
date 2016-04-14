@@ -11,6 +11,8 @@ module Bling
         attr_accessor :idServico, :servico, :codigoRastreamento, :dataSaida, :prazoEntregaPrevisto, :valorFretePrevisto
         
         def initialize(attributes={})
+          attributes = attributes.deep_stringify_keys
+          
           @idServico = attributes["idServico"]
           @servico = attributes["servico"]
           @codigoRastreamento = attributes["codigoRastreamento"]

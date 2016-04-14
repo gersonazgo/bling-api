@@ -11,6 +11,8 @@ module Bling
         attr_accessor :valor, :dataVencimento, :obs, :dias
         
         def initialize(attributes={})
+          attributes = attributes.deep_stringify_keys
+          
           @valor = attributes["valor"]
           @dataVencimento = attributes["dataVencimento"]
           @obs = attributes["obs"]

@@ -10,6 +10,8 @@ module Bling
       attr_accessor :transportadora, :tipo_frete, :servico_correios, :enderecoEntrega, :peso_bruto, :volumes
       
       def initialize (attributes={})
+        attributes = attributes.deep_stringify_keys
+        
         @transportadora = attributes["transportadora"]
         @tipo_frete = attributes["tipo_frete"]
         @peso_bruto = attributes["peso_bruto"]

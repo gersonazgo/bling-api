@@ -10,6 +10,7 @@ module Bling
       attr_accessor :codigoRastreamento
       
       def initialize(attributes={})
+        attributes = attributes.deep_stringify_keys
         @codigoRastreamento = attributes["codigoRastreamento"]
       end
 

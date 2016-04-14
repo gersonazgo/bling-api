@@ -11,6 +11,8 @@ module Bling
         attr_accessor :nome, :endereco, :numero, :complemento, :cidade, :bairro, :cep, :uf
         
         def initialize(attributes={})
+          attributes = attributes.deep_stringify_keys
+          
           @nome = attributes["nome"]
           @endereco = attributes["endereco"]
           @numero = attributes["numero"]

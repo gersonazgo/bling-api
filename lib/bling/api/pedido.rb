@@ -27,7 +27,7 @@ module Bling
         @tipoIntegracao = attributes["tipoIntegracao"]
         @loja = attributes["loja"] || "9"
         @nat_operacao = attributes["nat_operacao"] || "Venda de Mercadorias"
-        byebug
+        # byebug
         # Objects
         if attributes["cliente"].is_a? Hash
           @cliente = Bling::Api::Pedidos::Cliente.new(attributes["cliente"])
