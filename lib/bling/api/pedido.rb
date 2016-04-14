@@ -97,7 +97,7 @@ module Bling
       end
 
       def to_xml
-        byebug
+        
 
         if self.transporte.enderecoEntrega.nil? 
           enderecoEntrega = self.cliente 
@@ -162,15 +162,17 @@ module Bling
           pedido[:itens] << item
         end
 
-        pedido[:parcelas] = []
-        self.parcelas.each do |parcela|
-          parcela = { 
-              "dias": parcela.dias, 
-              "data": parcela.dataVencimento.strftime("%d/%m/%Y"), 
-              "vlr": parcela.valor, 
-              "obs": parcela.obs, 
-          }
-          pedido[:parcelas] << parcela
+        unless self.parcelas.nil?
+          pedido[:parcelas] = []
+          self.parcelas.each do |parcela|
+            parcela = { 
+                "dias": parcela.dias, 
+                "data": parcela.dataVencimento.strftime("%d/%m/%Y"), 
+                "vlr": parcela.valor, 
+                "obs": parcela.obs, 
+            }
+            pedido[:parcelas] << parcela
+          end
         end
 
         pedido.to_xml(root: 'pedido', dasherize: false).gsub('iten>', 'item>').gsub("\n", "").gsub("\"", "'")
