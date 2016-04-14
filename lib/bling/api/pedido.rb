@@ -97,6 +97,7 @@ module Bling
       end
 
       def to_xml
+        byebug
 
         if self.transporte.enderecoEntrega.nil? 
           enderecoEntrega = self.cliente 
