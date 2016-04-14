@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :transporte, class: Bling::Api::Transporte do
-    transportadora nil
+    transportadora "Correios"
     tipo_frete "R"
-    servico_correios "PAC"
-    # servico_correios "SEDEX (CONTRATO)"
+    # servico_correios "PAC"
+    servico_correios "SEDEX (CONTRATO)"
   end
 end
 

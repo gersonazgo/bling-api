@@ -17,7 +17,8 @@ end
 
 def create_pedido
   volume = FactoryGirl.build(:volume)
-  transporte = FactoryGirl.build(:transporte, volumes: [volume])
+  endereco_entrega = FactoryGirl.build(:endereco_entrega)
+  transporte = FactoryGirl.build(:transporte, volumes: [volume], enderecoEntrega: endereco_entrega)
 
   item = FactoryGirl.build(:item)
   item_2 = FactoryGirl.build(:item, codigo: "PJ006CR", descricao: "Porta-Jaleco Flamingo") 
