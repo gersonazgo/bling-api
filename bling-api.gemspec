@@ -33,7 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "awesome_print"
   spec.add_development_dependency "factory_girl"
   spec.add_development_dependency "pry-rails"
-  spec.add_dependency "byebug"
   spec.add_dependency "httparty"
   spec.add_dependency "faraday"
   spec.add_dependency "json"
