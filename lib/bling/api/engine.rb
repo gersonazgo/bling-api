@@ -1,5 +1,4 @@
 #lib/bling/api/engine.rb
-require 'byebug'
 require 'faraday'
 require 'json'
 require 'rails'

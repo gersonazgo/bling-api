@@ -1,5 +1,4 @@
 #lib/bling/api/pedido.rb
-require 'byebug'
 require 'faraday'
 require 'json'
 

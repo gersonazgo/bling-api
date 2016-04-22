@@ -1,5 +1,4 @@
 #lib/bling/api/nota_fiscal.rb
-require 'byebug'
 require 'faraday'
 require 'json'
 
