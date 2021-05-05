@@ -82,7 +82,5 @@ Pedido.save
 Agradecemos aos criadores das gems https://github.com/organisys/bling-ruby e https://github.com/arielschvartz/Bling-Rails que usamos como referência. Thanks, guys!
 
 ## Colaboradores
-A equipe do Porta-Jaleco (www.portajaleco.com.br) é responsável pela manutenção desta Gem.
-
 Gerson Azevedo <gersonazgo@gmail.com>
 Aline Ebone <ini.ebone@gmail.com>
